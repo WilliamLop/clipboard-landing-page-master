@@ -1,0 +1,503 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+/* Creo mis variables de color en el root */
+:root{
+
+    --StrongCyan: hsl(171, 66%, 44%);
+    --StrongCyanhover: hsla(171, 66%, 44%, 0.788);
+    --LightBlue: hsl(233, 100%, 69%);
+    --LightBluehover: hsla(233, 100%, 69%, 0.781);
+    --DarkGrayishBlue: hsl(210, 10%, 33%);
+    --GrayishBlue: hsl(201, 11%, 66%);
+    --color-text-btns:#EEFFFF;
+    --bgfooter: #F5F6F8;
+}
+/* Estilo el body para buenas prácticas  */
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    line-height: 1.5;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 1rem;
+    background-image: url(images/bg-header-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 100% 10%;
+}
+
+/* Estilo la primer seccion de mi seccion main */
+
+main .content-head{
+    width: 90%;
+    margin: 50px auto;
+
+    text-align: center;
+    padding: 3rem 0;
+}
+.text-color{
+    color: var(--GrayishBlue);
+}
+main .content-head p{
+    width: 100%;
+    margin: 0 auto;
+    color: var(--GrayishBlue);
+
+    
+}
+
+main .content-head .btns-download{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    width: 80%;
+    margin: 3.5rem auto;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+    position: relative;
+    
+}
+
+.btn-style{
+    border-radius: 1rem;
+    border: none;
+    padding: 1rem;
+    font: inherit;
+    font-weight: 700;
+    color: var(--color-text-btns);
+    letter-spacing: 0.6px;
+    cursor: pointer;
+
+    
+}
+
+.btn-cyan{
+    background-color: var(--StrongCyan);
+    border-bottom: 3px solid #1F9F8B;
+    align-items: center;
+    
+}
+
+.btn-cyan:hover{
+    background-color: var(--StrongCyanhover);
+    transition: all 0.6s ease-out;
+}
+
+.btn-blue{
+    background-color: var(--LightBlue);
+    border-bottom: 3px solid #4F62DB;
+}
+.btn-blue:hover{
+    background-color: var(--LightBluehover);
+    transition: all 0.6s ease-out;
+}
+.separator {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* Estilo el content-keep */
+.content-keep{
+    width: 100%;
+    /* margin: 0 auto; */
+    padding: 1rem 0;
+}
+.content-keep .text-title{
+    text-align: center;
+}
+.content-keep p{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+.content-keep section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 40px auto;
+
+}
+
+.content-keep section img{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.content-keep .content-info{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90%, 200px));
+    gap: 1rem;
+    justify-content: center;
+    
+}
+.content-keep .content-info p{
+    width: 100%;
+}
+
+.access{
+    margin: 6rem auto;
+}
+.separator img{
+    width: 100%;
+    margin: 2rem auto;
+}
+
+
+/* Estilo la sección supercharge  work*/
+
+.section-work{
+    width: 90%;
+    margin: 3rem auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    align-items: center;
+    gap: 2rem;
+}
+
+.section-work article img{
+    width: 55px;
+    height: 40px;
+    /* background-color:blue; */
+}
+
+/* Estilo la sección de compañias */
+
+.companys{
+    width: 90%;
+    margin: 6rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 3rem;
+    place-items: center;
+      
+}
+
+/* Estilo el footer */
+
+footer{
+  display: grid;
+  place-items: center;
+  background-color: var(--bgfooter);
+}
+footer .footer{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+}
+
+ul{
+    list-style: none;
+    margin: 1rem 0 0 0;
+    padding: 0;
+}
+li{
+    line-height: 2;
+    font-weight: 400;
+    text-align: left;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    /* color: var(--GrayishBlue); */
+}
+
+li:hover{
+    color: var(--DarkGrayishBlue);
+    transition: all 0.6s ease-out;
+}
+.redes{
+    display: flex;
+    justify-content: center;
+    margin: 3rem auto;
+    gap: 2rem;
+}
+.redes img{
+    cursor: pointer;
+}
+.footer .logo{
+    margin: 0 auto;
+}
+.attribution{
+    text-align:center;
+}
+
+
+/* Media querys para todos los dispositivos disponibles desde 375px mobile a 2560px pantalla grande 4k */
+
+@media (min-width: 768px){
+    body{
+    background-image: url(images/bg-header-desktop.png);
+    background-size: 100%;
+
+    }
+    main .content-head p{
+        width: 80%;
+        margin: 0 auto;
+        
+    }
+    .btn-style{
+        width: 34%;
+        padding: 0.8rem;
+
+
+    }
+    .btn-cyan{
+        position: absolute;
+        left: 14%;
+        right: 0;
+        
+    }
+
+    .btn-blue{
+        position: absolute;
+        right:14%;
+    }
+    .content-keep section img{
+        width: 420px;
+    }
+    .content-keep section{
+        text-align: left;
+    }
+    
+    .content-keep .content-info p{
+        text-align: left;
+      
+    }
+    .separator  p{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .companys{
+        gap: 0;
+    }
+    footer .footer{
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+        margin: 0 auto;
+     }
+
+    footer .footer nav{
+        display: flex;
+        gap: 2rem;
+    }
+    li{
+        text-align: left;
+    }
+    .content-keep .content-info{
+        justify-content: end;
+    }
+ 
+    
+}
+@media (min-width: 1024px){
+    main .content-head p{
+        width: 60%;
+        margin: 0 auto;
+        
+    }
+    .btn-style{
+        width: 25%;
+        padding: 0.8rem;
+
+
+    }
+    .btn-cyan{
+        position: absolute;
+        left: 24%;
+        right: 0;
+        
+    }
+
+    .btn-blue{
+        position: absolute;
+        right:24%;
+    }
+
+    .content-keep p{
+        width: 67%;
+        margin: 0 auto;
+    }
+    .content-keep section img{
+        width: 505px;
+    }
+    .separator  p{
+        width: 60%;
+        margin: 0 auto;
+    }
+    .separator img{
+        width: 50%;
+        margin: 2rem auto;
+    }
+    .section-work{
+        width: 80%;
+        gap: 1rem;
+    }
+    .companys{
+        width: 80%;
+        gap: 0;
+    }
+    .content-keep .content-info{
+        justify-content: start;
+    }
+ 
+    
+  
+    
+}
+
+@media (min-width: 1262px){
+    .content-keep section img{
+        width: 617px;
+    }
+}
+@media (min-width: 1440px){
+    main .content-head p{
+        width: 45%;
+        margin: 0 auto;
+        
+    }
+    .btn-style{
+        width: 18%;
+        padding: 0.8rem;
+
+
+    }
+    .btn-cyan{
+        position: absolute;
+        left: 31%;
+        right: 0;
+        
+    }
+
+    .btn-blue{
+        position: absolute;
+        right:31%;
+    }
+
+    .content-keep p{
+        width: 47%;
+        margin: 0 auto;
+    }
+    .content-keep section img{
+        width: 705px;
+    }
+    .separator  p{
+        width: 45%;
+        margin: 0 auto;
+    }
+    .separator img{
+        width: 50%;
+    }
+    .content-keep .content-info{
+        justify-content: start;
+    }
+    
+    
+}
+@media (min-width: 1920px){
+    body{
+        background-image: url(images/bg-header-desktop.png);
+        background-size: 100% 10%;
+    
+    }
+    main .content-head p{
+        width: 32%;
+        margin: 0 auto;
+        
+    }
+    .btn-style{
+        width: 15%;
+        padding: 0.8rem;
+
+
+    }
+    .btn-cyan{
+        position: absolute;
+        left: 34%;
+        right: 0;
+        
+    }
+
+    .btn-blue{
+        position: absolute;
+        right:34%;
+    }
+    .content-keep p{
+        width: 37%;
+        margin: 0 auto;
+    }
+    .content-keep section img{
+        width: 945px;
+    }
+    .separator  p{
+        width: 32%;
+        margin: 0 auto;
+    }
+
+    .section-work{
+        width: 55%;
+        padding: 1rem;
+        gap: 2rem;
+    }
+    .companys{
+        width: 55%;
+        gap: 0;
+    }
+   
+}
+@media (min-width: 2560px){
+    body{
+        background-image: url(images/bg-header-desktop.png);
+        background-size: 100% 10%;
+    
+    }
+    main .content-head p{
+        width: 25%;
+        margin: 0 auto;
+        
+    }
+    .btn-style{
+        width: 10%;
+        padding: 0.8rem;
+
+
+    }
+    .btn-cyan{
+        position: absolute;
+        left: 39%;
+        right: 0;
+        
+    }
+
+    .btn-blue{
+        position: absolute;
+        right:39%;
+    }
+    .content-keep p{
+        width: 27%;
+        margin: 0 auto;
+    }
+    .content-keep section img{
+        width: 1055px;
+    }
+    .separator img{
+        width: 40%;
+        margin: 2rem auto;
+    }
+    .section-work{
+        width: 55%;
+        padding: 1rem;
+        gap: 2rem;
+    }
+    .companys{
+        width: 55%;
+        gap: 2rem;
+    }
+}
